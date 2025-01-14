@@ -4,4 +4,6 @@ Tämä on leipätekstiä
 
 ## Toinen otsikko
 
-Tässä linkki tähän dokumenttiin: https://github.com/penskuj/linux-palvelimet/h0-hei-weppi.md
+Tässä linkki tähän samaiseen dokumenttiin: https://github.com/penskuj/linux-palvelimet/blob/main/h0-hei-weppi.md
+
+fin
