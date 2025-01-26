@@ -67,7 +67,7 @@ Grep toimii myös tiedostojen sisältöihin. Ohessa kuvakaappaus, jossa putkitet
 
 ## f. Rauta
 
-*Lisätty 26.1.2025 21:54 (30min ensimmäisen commitin jälkeen): Asensin lshw-sovelluksen `sudo apt-get install lshw`-komennolla. Asennus onnistui. 
+*Lisätty 26.1.2025 21:54 (30min ensimmäisen commitin jälkeen): Asensin lshw-sovelluksen `sudo apt-get install lshw`-komennolla. Asennus onnistui.*
 
 ![Rauta kuvassa](https://github.com/user-attachments/assets/740a549c-e08e-4487-b79c-523a0da3097c)
 
