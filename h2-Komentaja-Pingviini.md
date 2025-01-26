@@ -2,6 +2,8 @@
 
 Käyttöympäristö avattu edellisen kotitehtävän [raportissa](https://github.com/penskuj/linux-palvelimet/blob/main/h1-Oma-Linux.md). Debian-virtuaalikoneen asennus on sama kuin siinä.
 
+Tehtävä suoritettu 26.1.2025
+
 ## Artikkelin tiivistelmä
 
 - Artikkeli käsittelee Linuxin komentokehotteen peruskäyttöä, `pwd`, `ls` ja `cd` -komennot ensiksi.
@@ -64,6 +66,8 @@ Grep toimii myös tiedostojen sisältöihin. Ohessa kuvakaappaus, jossa putkitet
 ![grep tekstitiedostosta](https://github.com/user-attachments/assets/4392108d-b203-46bf-988a-cb50628b5406)
 
 ## f. Rauta
+
+*Lisätty 26.1.2025 21:54 (30min ensimmäisen commitin jälkeen): Asensin lshw-sovelluksen `sudo apt-get install lshw`-komennolla. Asennus onnistui. 
 
 ![Rauta kuvassa](https://github.com/user-attachments/assets/740a549c-e08e-4487-b79c-523a0da3097c)
 
