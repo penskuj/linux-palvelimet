@@ -24,10 +24,11 @@ Menin internet-selaimeen ja kirjoitin osoitekenttään `localhost` ja tämä ava
 ## b) Lokit
 
 menin `var/log`-kansioon, ja avasin apache2:n `access.log`-tiedoston. Tiedoston listaamat aikalokitiedot olivat kuitenkin luennon ajalta. Viimeisimmät ovat siis eri tiedostossa.
+
 ![image](https://github.com/user-attachments/assets/8d4f96fb-c17c-4090-a396-4352cc9f3938)
 
-
 Seuraavaksi avasin apache2:n `other_vhosts_access.log`-tiedoston, jonka alta viimeiset lokitiedot löytyivät. Selitteet pohjautuvat Apachen dokumentaatioon (Apache Software Foundation, 2025, "Log files"):
+
 ![image-1](https://github.com/user-attachments/assets/6ce33f6f-e8bc-4545-ae0a-8d282622fa7f)
 
 - `jaakko.example.com:80` - Lokitiedon verkko-osoite ja portti, joihin on otettu yhteyttä.
@@ -44,6 +45,7 @@ Seuraavaksi avasin apache2:n `other_vhosts_access.log`-tiedoston, jonka alta vii
 
 - Siirryin config-tiedostot sisältävään kansioon: `cd /etc/apache2/sites-available`
 - Otin kopion olemassaolevasta conf-tiedostosta: `sudo cp jaakko.example.com.conf hattu.example.com.conf`. Tämän jälkeen muokkasin palvelimen tiedot ohjeen mukaan:
+
 ![image-4](https://github.com/user-attachments/assets/86b670d4-ab41-4ec8-9e83-375098c15c40)
 
 - Vaihdoin kansiota, enabloin uuden sivuston ja disabloin edellisen: 
@@ -53,28 +55,31 @@ Seuraavaksi avasin apache2:n `other_vhosts_access.log`-tiedoston, jonka alta vii
 - Seuraavaksi käynnistin Apache-palvelimen uudellen `sudo systemctl restart apache2`
 
 - Näiden komentojen jälkeen latasin uudelleen localhostin selaimessa, ja sain virheilmoituksen koska hattu.example.com -osoitteelle ei oltu vielä luotu html-tiedostoa.
-![image-2](https://github.com/user-attachments/assets/bd60db7f-0c40-4c19-b3e9-0a94ab66cd87)
 
+![image-2](https://github.com/user-attachments/assets/bd60db7f-0c40-4c19-b3e9-0a94ab66cd87)
 
 - Kävin luomassa uuden kansion hattu.example.com -sivustolle:
     - `cd /home/penskuj/Public_sites`
     - `mkdir hattu.example.com`
 - Menin sisään uuteen kansioon ja tein palvelimen etusivun sisältävän tiedoston komennolla `echo "<h1>Hattu example</h1>" > index.html`. Tämän jälkeen sivun pystyi avaamaan selaimessa.
+
 ![image-3](https://github.com/user-attachments/assets/9793b802-881b-4a05-961a-6ad9ce1af5b5)
 
 
 ## e) HTML5 sivu
 
 Tein karvalakin html-koodin `index.html`-tiedostoon:
+
 ![image-6](https://github.com/user-attachments/assets/bde4cb0f-32a3-4391-a263-334abb7f1146)
 
 Sivu toimii uudelleen ladattaessa:
-![image-5](https://github.com/user-attachments/assets/c9679b48-16d5-42bf-ba1f-f0bbc6300027)
 
+![image-5](https://github.com/user-attachments/assets/c9679b48-16d5-42bf-ba1f-f0bbc6300027)
 
 ## f) curl -I ja curl -komennot
 
 Ensin `curl -I localhost` -komento:
+
 ![image-7](https://github.com/user-attachments/assets/30e50a08-7f9e-4345-a25b-8a69c580e0d2)
 
 Selityksen Wikipediasta tulkittuna (Wikimedia Foundation, 2025):
@@ -97,9 +102,11 @@ Hakemus laitettu.
 ## o) Kaksi erinimistä verkkosivua
 
 Lisäsin verkkosivustojen osoitteet hosts-tiedostoon, johon pääsee esim. `micro /etc/hosts` komennolla. Lisäsin sinne sivustojen osoitteet localhost-palvelimen IP-osoitteen jatkoksi:
+
 ![image-9](https://github.com/user-attachments/assets/7bead816-a64c-4fa6-a82f-6a8ae05d13fd)
 
 Sain mielenkiintoisen virheen menemällä hattu.example.com -sivulle. Tämä lataa vanhan tekstitiedoston, jonka päälle olen jo sittemmin kirjoittanut HTML5-verkkosivun. Eli selaimen lataamaa sivua ei ollut enää olemassakaan.
+
 ![image-8](https://github.com/user-attachments/assets/ceb812d3-7304-43d9-8ca0-67d59508e052)
 
 Tämä johtui sivun tallentumisesta selaimen välimuistiin. Päivitetty sivu aukesi painamalla shift samaan aikaan reload-painikkeen kanssa.
